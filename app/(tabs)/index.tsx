@@ -72,12 +72,12 @@ const styles = StyleSheet.create({
     left: 0,
     position: 'absolute',
   },
-});*/
+});
 
 import React, { useState } from 'react';
 
 function Welcome() {
-  const [name, setName] = useState("John");
+  const [name, setName] = useState("Name");
 
   return (
     <div>
@@ -91,4 +91,78 @@ function Welcome() {
   );
 }
 
-export default Welcome;
+export default Welcome;*/
+
+// src/Login.js
+
+/*import { signInWithEmailAndPassword } from 'firebase/auth';*/
+import React, { useState } from 'react';
+/*import { auth } from './firebase';*/
+
+const Login = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
+  /*const handleLogin = async (e) => {
+    e.preventDefault();
+    setError('');
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      alert("Login successful!");
+      // redirect to dashboard
+    } catch (err) {
+      setError(err.message);
+    }
+  };*/
+
+  return (
+    <div style={styles.box}>
+      <h2 style={styles.title}></h2>
+      <input style={styles.input} type="text" placeholder='username'/> 
+      <input style={styles.input} type="text" placeholder='email'/>
+      
+      <button style={styles.button}>Log In</button>
+      <button style={styles.button}>Sign Up</button>
+    </div>
+  );
+};
+
+const styles = {
+  box: {
+    maxWidth: '300px',
+    margin: '100px auto',
+    padding: '20px',
+    border: '2px solid #ddd',
+    borderRadius: '8px',
+    textAlign: 'center',
+    fontFamily: 'Arial, sans-serif',
+  },
+  title: {
+    marginBottom: '20px',
+  },
+  input: {
+    width: '90%',
+    padding: '10px',
+    marginBottom: '20px',
+    borderRadius: '4px',
+    border: '2px solid #aaa',
+    
+    
+  },
+  button: {
+    width: '60%',
+    padding: '8px',
+    marginBottom: '8px',
+    marginRight: '5px',
+    backgroundColor: '#007bff',
+    color: '#fff',
+    border: 'none',
+    borderRadius: '4px',
+    cursor: 'pointer',
+
+  },
+};
+
+
+export default Login;
