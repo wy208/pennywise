@@ -137,7 +137,7 @@ const styles = {
     borderRadius: '8px',
     textAlign: 'center',
     fontFamily: 'Arial, sans-serif',
-  },
+  } as React.CSSProperties,
   title: {
     marginBottom: '20px',
   },
